@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--white);
+    justify-content: center;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+.max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary-color: #000839;
+    --primary-shades: #00020b;
+    --para-color: #80849c;
+    --helper-color: #1264fa;
+    --white: #fff;
+    --bg-color: #e6e6e6;
+}
+
+/* custom scroll bar */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* END */
+
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+img{
+    display: inline-block;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+}
+
+.para{
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--para-color);
+}
+
+/* header and navbar style start */
+
+.header {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5.4rem;
+    background-color: white;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar{
+    display: flex;
+    align-items:center;
+}
+
+.navbar-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    font-size: 1.5rem;
+}
+
+.navbar-list .navbar-btn {
+    padding: 1.2rem 2.4rem;
+    background-color: var(--white);
+    border: 1px solid var(--helper-color);
+    color: var(--helper-color);
+    border-radius: 5rem;
+    transition: all 0.3s linear;
+}
+
+.navbar-list .navbar-link:hover,
+.navbar-list .navbar-link:active{
+    color: var(--helper-color);
+}
+
+.navbar-btn:hover,
+.navbar-btn:active{
+    background-color: var(--helper-color);
+    color: var(--white);
+}
+
+.navbar-link{
+    text-transform: uppercase;
+}
+
+.mobile-nav-icon{
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.mobile-navbar-btn  {
+    display: none;
+}
+
+.mobile-nav-icon[name="close"] {
+    display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* HOME Section */
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    background: url(./images/2-img.png);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    /* background-color: #555; */
+}
+
+.home-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+
+.home .home-container .text-1,
+.home .home-container .text-2,
+.home .home-container .text-3
+ {
+    font-size: 3.5rem;
+}
+
+.home .home-container .text-3 span{
+    color: var(--helper-color);
+    font-weight: 500;
+}
+
+.get-btn{
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 600;
+    border: 1px solid var(--helper-color);
+    padding: 1rem;
+    border-radius: 5rem;
+    background-color: var(--helper-color);
+}
+
+
+.social-media ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+}
+
+.social-media ul li{
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.social-media ul li a{
+    color: black;
+}
+
+/* HOME Section Ended */
+
+
+/* About Me */
+
+.home-container-2 {
+    max-width: 1400px;
+    width: auto;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto auto auto;
+    box-sizing: border-box;
+    background: #FFFAFA;
+}
+
+.home-container-2 img-container img{
+    mix-blend-mode: luminosity;
+}
+
+.home-container-2 img{
+    width: 300px;
+    height: 300px;
+
+}
+
+.text-content p a{
+    color: black;
+}
+
+.text-content h1{
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--helper-color);
+    padding: 20px;
+}
+
+.text-content p{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.contact{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+
+/* Skills Started  */
+
+.skills-container {
+    width: auto;
+    padding:60px 0 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: url(./images/skill-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.skills-container h1{
+    font-size: 10rem;
+    margin-bottom: 20px;
+    color: var(--helper-color);
+    font-family: 'Aboreto', cursive;
+}
+
+
+.skills-cont{
+    display: flex;
+    border-radius: 15px;
+    margin: 2px;
+}
+
+.skills-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    padding: 3rem;
+    background-color: var(--helper-color);
+    border-radius: 5px;
+    color: var(--white);
+    margin: 5rem;
+    cursor: pointer;
+}
+
+/* Skills Started ENDED */
+
+
+/* Contact Section */
+
+.contact-me-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+    background: #edf7fe;
+
+}
+
+        input[type=text], [type=number], [type=email],[type=tel], select, textarea {
+        width: 100%; 
+        padding: 12px;
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        box-sizing: border-box; 
+        margin-top: 6px; 
+        margin-bottom: 16px; 
+        resize: vertical;
+      }
+      
+    
+      input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      
+
+.contact-me-h1 h1{
+    color: var(--helper-color);
+}
+
+/* Contact Section Ended*/
+
+/* Footer Section */
+
+footer{
+    padding: 40px;
+    font-size: 20px;
+    background-color: var(--white);
+    color: var(--helper-color);
+}
