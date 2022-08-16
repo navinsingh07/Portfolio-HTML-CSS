@@ -435,3 +435,15 @@ footer{
     background-color: var(--white);
     color: var(--helper-color);
 }
+
+
+@media screen and (min-width: 1880) {
+    .home-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 50px;
+        background: none;
+    }
+}
