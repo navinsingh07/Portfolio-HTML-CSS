@@ -220,11 +220,6 @@ input:checked + .slider:before {
     align-items: center;
     justify-content: center;
     padding: 80px;
-    background: url(./images/2-img.png);
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-size: cover;
-    /* background-color: #555; */
 }
 
 .home-container{
